@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> TO-DO LIST APP </title>
+	<style>
+	ul { list-style: none; padding: 0; margin: 0; width: 500px; }
+	li { border: 1px solid #ccc; background: #eee; padding: 5px 10px; color: #000; }
+	li span { padding-left: 10px; cursor: default; }
+	.checked { text-decoration: line-through; font-weight: bold; color: #c00; }
+	</style>
+
+</head>
+<body>
+
+<h1> TO-DO LIST </h1>
+<script type="text/javascript">
+var count=0;
+	function save(){
+		count=parseInt(count)+parseInt(1);
+		var save=document.getElementById('inItemText').value;
+		console.log(save);
+		localStorage.setItem(count,save);
+
+	}
+</script>
+<p><input type="text" id="inItemText"/></p>
+<button onclick="save()">SAVE</button>
+
+<ul id="todoList"></ul>
+
+<script src="todolist.js"></script>
+
+</body>
+</html>
